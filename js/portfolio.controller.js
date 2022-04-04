@@ -21,11 +21,15 @@ function onPortfolioClick() {
 //   debugger;
   var projNum = +this.dataset.id;
   var proj = getProject(projNum);
-  $(`#portfolioModal${projNum} h2`).text(proj.name);
-  $(`#portfolioModal${projNum} .item-intro`).text(proj.title);
-  $(`#portfolioModal${projNum} .item-desc`).text(proj.desc);
+  $(`#portfolioModal h2`).text(proj.name);
+  $(`#portfolioModal .item-intro`).text(proj.title);
+  $(`#portfolioModal .item-desc`).text(proj.desc);
   var projMonth = MONTH_NAME[new Date(proj.publishedAt).getMonth() - 1];
   var projYear = new Date(proj.publishedAt).getFullYear();
-  $(`#portfolioModal${projNum} .date`).text(`Date : ${projMonth} ${projYear}`);
-  $(`#portfolioModal${projNum} .category`).text(`category : ${(proj.labels.join(','))}`);
+  $(`#portfolioModal .date`).text(`Date : ${projMonth} ${projYear}`);
+  $(`#portfolioModal .category`).text(`category : ${(proj.labels.join(','))}`);
+}
+
+function renderModal(modalNum){
+
 }
