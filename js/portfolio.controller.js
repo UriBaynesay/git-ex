@@ -18,7 +18,7 @@ const MONTH_NAME = [
 console.log($(".portfolio-link").click(onPortfolioClick));
 
 function onPortfolioClick() {
-  debugger;
+//   debugger;
   var projNum = +this.dataset.id;
   var proj = getProject(projNum);
   $(`#portfolioModal${projNum} h2`).text(proj.name);
