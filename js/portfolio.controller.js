@@ -15,7 +15,7 @@ const MONTH_NAME = [
   "December",
 ];
 
-console.log($(".portfolio-link").click(onPortfolioClick));
+$(".portfolio-link").click(onPortfolioClick)
 
 function onPortfolioClick() {
 //   debugger;
